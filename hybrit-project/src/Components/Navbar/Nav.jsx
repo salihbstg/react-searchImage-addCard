@@ -23,7 +23,7 @@ const nav = ({ setValue }) => {
       <div>
         <Link
           onClick={() => {
-            setValue(true);
+            setValue("search");
           }}
         >
           Resim Arama
@@ -31,8 +31,12 @@ const nav = ({ setValue }) => {
       </div>
       <div>
         <Link onClick={()=>{
-          setValue(false);
+          setValue("card");
         }}>Kart Ekleme</Link>
+      </div><div>
+        <Link onClick={()=>{
+          setValue("git");
+        }}>Github Repo</Link>
       </div>
     </div>
   );

@@ -35,9 +35,9 @@ const CardForm = () => {
         }
         setArr(a=>[...a,newCard]);
       }}>
-        <input type="text" name="url" id="url" />
-        <input type="text" name="title" id="title" />
-        <input type="text" name="description" id="description" />
+        <input type="text" placeholder="Kart resim adresini girin" name="url" id="url" />
+        <input type="text" placeholder="Başlığı girin" name="title" id="title" />
+        <input type="text" placeholder="Açıklama girin" name="description" id="description" />
         <input type="submit" value="Ekle" />
       </MyForm2>
       {arr.map((data,index)=><Card url={data.url} title={data.title} description={data.description}></Card>)}

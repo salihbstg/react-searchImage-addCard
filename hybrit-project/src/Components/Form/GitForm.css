@@ -1,0 +1,26 @@
+.git-form{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.git-form input[type='text']{
+    font-size: 17px;
+    padding: 5px;
+    width: 80%;
+    text-align: center;
+    outline: none;
+    border: 1px solid #239857;
+    border-radius: 10px;
+}
+.links{
+    display: flex;
+    gap: 30px;
+    margin: 30px;
+    flex-wrap: wrap;
+}
+a{
+    padding: 20px;
+    background-color: red;
+    text-decoration: none;
+    color: white;
+}
