@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./CardForm.css";
 import styled from "styled-components";
 import Card from "../Card/Card";
@@ -23,7 +23,10 @@ width: 100%;
   }
 `;
 const CardForm = () => {
-    const [arr,setArr]=useState([]);
+    const [arr,setArr]=useState(JSON.parse(localStorage.getItem("Card")));
+    useEffect(()=>{
+      localStorage.setItem("Card",JSON.stringify(arr));
+    },[arr])
   return (
     <>
       <MyForm2 onSubmit={(event)=>{
@@ -40,7 +43,7 @@ const CardForm = () => {
         <input type="text" placeholder="Açıklama girin" name="description" id="description" />
         <input type="submit" value="Ekle" />
       </MyForm2>
-      {arr.map((data,index)=><Card url={data.url} title={data.title} description={data.description}></Card>)}
+      {arr.map((data,index)=><Card url={data.url} title={data.title} key={index} description={data.description}></Card>)}
     </>
   );
 };
